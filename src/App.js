@@ -14,6 +14,10 @@ import BoardModerator from "./components/BoardModerator";
 import BoardAdmin from "./components/BoardAdmin";
 
 import EventBus from "./common/EventBus";
+import DeviceManagementPage from "./components/DeviceManagementPage";
+import UpdateDevice from "./components/UpdateDevice";
+import SoftwareManagementPage from "./components/SoftwareManagementPage";
+
 
 const App = () => {
   const [showModeratorBoard, setShowModeratorBoard] = useState(false);
@@ -125,6 +129,9 @@ const App = () => {
           <Route path="/user" element={<BoardUser/>} />
           <Route path="/mod" element={<BoardModerator/>} />
           <Route path="/admin" element={<BoardAdmin/>} />
+          <Route path="/admin/device-management" element={<DeviceManagementPage />} />
+          <Route path="/admin/software-management" element={<SoftwareManagementPage />} />
+          <Route path="/update-device/:deviceId" element={<UpdateDevice/>} />
         </Routes>
       </div>
 
